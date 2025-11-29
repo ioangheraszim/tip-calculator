@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
@@ -42,20 +42,7 @@
           </div>
           <div class="form-group form-group--tip">
             <label class="form-group__label" for="tip">Select tip %</label>
-            <div class="form-group__options">
-              <button type="button" class="form-group__option">5%</button>
-              <button type="button" class="form-group__option">10%</button>
-              <button type="button" class="form-group__option">15%</button>
-              <button type="button" class="form-group__option">25%</button>
-              <button type="button" class="form-group__option">50%</button>
-              <input
-                type="text"
-                id="people"
-                name="people"
-                class="form-group__input"
-                placeholder="Custom"
-              />
-            </div>
+            <div class="form-group__options"></div>
           </div>
           <div class="form-group form-group--people">
             <label class="form-group__label" for="people"
@@ -82,15 +69,15 @@
             <p class="results__label">
               Tip Amount <span class="results__per">/ person</span>
             </p>
-            <p class="results__value">$4.27</p>
+            <p id="person" class="results__value">$0</p>
           </div>
           <div class="results__item">
             <p class="results__label">
               Total <span class="results__per">/ person</span>
             </p>
-            <p class="results__value">$32.79</p>
+            <p id="total" class="results__value">$0</p>
           </div>
-          <button type="reset" class="results__reset">RESET</button>
+          <button id="reset" type="reset" class="results__reset">RESET</button>
         </article>
       </section>
     </main>

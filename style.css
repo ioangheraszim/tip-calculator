@@ -120,11 +120,10 @@ select {
 }
 
 .form-group__input:focus {
-  border: none;
   outline: 1px solid var(--green-400);
 }
 
-.form-group__input--error {
+.form-group__input.form-group__input--error {
   outline: 1px solid red;
 }
 
