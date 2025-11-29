@@ -19,5 +19,79 @@
     <script src="script.js"></script>
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
-  <body></body>
+  <body>
+    <main class="app">
+      <h1 class="app__title">SPLITTER</h1>
+      <section class="calculator">
+        <form class="calculator__form" action="#">
+          <div class="form-group form-group--bill">
+            <label class="form-group__label" for="bill">Bill</label>
+            <div class="form-group__input-wrapper">
+              <img
+                src="./images/icon-dollar.svg"
+                alt="Dollar icon"
+                class="form-group__icon"
+              />
+              <input
+                type="text"
+                id="bill"
+                name="bill"
+                class="form-group__input"
+              />
+            </div>
+          </div>
+          <div class="form-group form-group--tip">
+            <label class="form-group__label" for="tip">Select tip %</label>
+            <div class="form-group__options">
+              <button type="button" class="form-group__option">5%</button>
+              <button type="button" class="form-group__option">10%</button>
+              <button type="button" class="form-group__option">15%</button>
+              <button type="button" class="form-group__option">25%</button>
+              <button type="button" class="form-group__option">50%</button>
+              <input
+                type="text"
+                id="people"
+                name="people"
+                class="form-group__input"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <div class="form-group form-group--people">
+            <label class="form-group__label" for="people"
+              >Number of People</label
+            >
+            <div class="form-group__input-wrapper">
+              <img
+                src="./images/icon-person.svg"
+                alt="Person icon"
+                class="form-group__icon"
+              />
+              <input
+                type="text"
+                id="people"
+                name="people"
+                class="form-group__input"
+              />
+            </div>
+          </div>
+        </form>
+        <article class="results">
+          <div class="results__item">
+            <p class="results__label">
+              Tip Amount <span class="results__per">/ person</span>
+            </p>
+            <p class="results__value">$4.27</p>
+          </div>
+          <div class="results__item">
+            <p class="results__label">
+              Total <span class="results__per">/ person</span>
+            </p>
+            <p class="results__value">$32.79</p>
+          </div>
+          <button type="reset" class="results__reset">RESET</button>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
