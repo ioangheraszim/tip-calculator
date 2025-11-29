@@ -49,9 +49,14 @@ select {
   font: inherit;
 }
 
-.app {
+.app,
+.form-group__label,
+.results__item {
   display: flex;
   align-items: center;
+}
+
+.app {
   flex-direction: column;
   width: min(100% - 2rem, 375px);
   margin: 0 auto;
@@ -81,6 +86,7 @@ select {
 .form-group__label {
   font-size: 1rem;
   color: var(--grey-400);
+  justify-content: space-between;
 }
 
 .form-group__input-wrapper {
@@ -118,6 +124,15 @@ select {
   outline: 1px solid var(--green-400);
 }
 
+.form-group__input--error {
+  outline: 1px solid red;
+}
+
+.form-group__label--error {
+  color: red;
+  display: none;
+}
+
 .form-group__option {
   border: none;
   outline: none;
@@ -127,10 +142,12 @@ select {
   font-size: 1.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: 350ms ease-in-out;
 }
 
 .form-group__option:hover {
   background-color: var(--green-400);
+  color: var(--green-900);
 }
 
 .results {
@@ -141,8 +158,6 @@ select {
 }
 
 .results__item {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   margin: 1.5rem 0;
 }
@@ -163,7 +178,7 @@ select {
 }
 
 .results__reset {
-  background-color: var(--green-400);
+  background-color: var(--grey-500);
   color: var(--green-900);
   width: 100%;
   border: none;
@@ -171,4 +186,56 @@ select {
   font-size: 1.25rem;
   padding: 0.5rem;
   cursor: pointer;
+}
+
+.results__reset:hover {
+  background-color: var(--green-400);
+}
+
+@media (min-width: 765px) {
+  body,
+  .calculator {
+    display: flex;
+    align-items: center;
+  }
+  body {
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .app {
+    width: min(100% - 2rem, 925px);
+  }
+
+  .app__title {
+    margin: 5rem 0;
+  }
+
+  .calculator {
+    justify-content: space-between;
+    padding: 0.5rem 1.25rem;
+  }
+
+  .calculator__form {
+    width: 50%;
+    margin: 0 2rem;
+  }
+
+  .form-group__options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .results {
+    width: 50%;
+    min-height: 100%;
+    padding: 2rem 2.5rem;
+  }
+
+  .results__reset {
+    margin: 6.5rem 0 0.5rem 0;
+  }
+
+  .results__value {
+    font-size: 2.5rem;
+  }
 }
